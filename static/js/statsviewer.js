@@ -360,7 +360,7 @@
       // to the right of the name (country flag | name | state flag)
       el("player-name").innerHTML =
         DL.flagSpan(p.nationality) +
-        "<span>" + DL.escapeHtml(p.name) + "</span>" +
+        '<span style="padding:0 8px">' + DL.escapeHtml(p.name) + "</span>" +
         (p.nationality && p.subdivision
           ? DL.subdivisionFlagSpan(p.nationality, p.subdivision)
           : "<span></span>");
@@ -423,7 +423,8 @@
       updateScope();
       renderList();
 
-      el("player-name").innerHTML = DL.flagSpan(code) + "<span>" + DL.escapeHtml(n.name) + "</span><span></span>";
+      el("player-name").innerHTML =
+        DL.flagSpan(code) + '<span style="padding:0 8px">' + DL.escapeHtml(n.name) + "</span><span></span>";
       el("rank").innerText = "#" + n.rank;
       el("score").innerText = n.score.toFixed(2);
       el("players").innerText = n.players.length;
