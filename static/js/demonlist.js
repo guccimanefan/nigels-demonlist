@@ -304,39 +304,64 @@
     root.innerHTML = html;
   };
 
+  // The demon-panel headline (`h3`), phrased exactly like pointercrate's
+  // demon-headline.* templates: "by {creator}, verified and published by {x}"
+  // etc., collapsing whenever a creator is also the publisher / verifier.
   function bylineHtml(demon) {
-    var creators = demon.creators && demon.creators.length ? demon.creators : [demon.publisher];
+    var creators = demon.creators && demon.creators.length ? demon.creators : [];
     var publisher = demon.publisher;
     var verifier = demon.verifier || publisher;
+    var P = DL.creditLink;
 
-    var parts = ["created by " + creators.map(DL.creditLink).join(", ")];
-    if (creators.indexOf(publisher) === -1) parts.push("published by " + DL.creditLink(publisher));
-    if (verifier !== publisher) parts.push("verified by " + DL.playerLink(verifier));
+    var vap =
+      publisher === verifier
+        ? "verified and published by " + P(publisher)
+        : "published by " + P(publisher) + ", verified by " + P(verifier);
 
-    return parts.join(", ");
+    if (!creators.length) return "by Unknown, " + vap;
+
+    if (creators.length === 1) {
+      var c = creators[0];
+      if (c === publisher && c === verifier) return "by " + P(c);
+      if (c !== publisher && c !== verifier) return "by " + P(c) + ", " + vap;
+      if (c === publisher) return "by " + P(c) + ", verified by " + P(verifier);
+      return "by " + P(c) + ", published by " + P(publisher);
+    }
+
+    if (creators.length === 2) {
+      return "by " + P(creators[0]) + " and " + P(creators[1]) + ", " + vap;
+    }
+
+    var rest = creators.slice(1).map(DL.escapeHtml).join(", ");
+    return (
+      "by " + P(creators[0]) +
+      ' and <span class="tooltip underdotted">more<span class="tooltiptext fade">' + rest + "</span></span>, " +
+      vap
+    );
   }
 
-  // pointercrate-style Position History table, from DL.positionHistoryFor
-  // (derived from data/changelog.js). Hidden entirely if there's nothing to show.
+  // Position History panel - pointercrate's demon-page "movements" panel,
+  // markup for markup: a js-collapse panel (collapsed by default) holding the
+  // hidden position chart placeholder + #history-table. Rows come from
+  // DL.positionHistoryFor (derived from data/changelog.js). Hidden if empty.
   function positionHistoryHtml(demon) {
     var rows = DL.positionHistoryFor(demon);
     if (!rows.length) return "";
 
     var body = rows
       .map(function (r) {
-        var rowCls =
-          r.delta === 0 ? "ph-add" : r.delta < 0 ? "ph-up" : "ph-down";
+        var cls = r.delta === 0 ? "" : r.delta < 0 ? " class=\"moved-up\"" : " class=\"moved-down\"";
         var change =
           r.delta === 0
-            ? '<span class="ph-change ph-flat">&ndash;</span>'
+            ? "-"
             : r.delta < 0
-            ? '<span class="ph-change ph-rise">&#9650; ' + Math.abs(r.delta) + "</span>"
-            : '<span class="ph-change ph-fall">&#9660; ' + r.delta + "</span>";
+            ? '<i class="fas fa-arrow-up"></i> ' + Math.abs(r.delta)
+            : '<i class="fas fa-arrow-down"></i> ' + r.delta;
         return (
-          '<tr class="' + rowCls + '">' +
-            "<td>" + DL.escapeHtml(DL.formatDate(r.date)) + "</td>" +
+          "<tr" + cls + ">" +
+            "<td>" + DL.escapeHtml(r.date) + "</td>" +
             "<td>" + change + "</td>" +
-            "<td>#" + r.position + "</td>" +
+            "<td>" + r.position + "</td>" +
             "<td>" + DL.escapeHtml(r.reason) + "</td>" +
           "</tr>"
         );
@@ -344,14 +369,17 @@
       .join("");
 
     return (
-      '<section class="panel fade js-scroll-anim" data-anim="fade">' +
-        '<div class="underlined pad"><h2>Position History</h2></div>' +
-        '<table class="position-history"><tbody>' +
-          '<tr><th class="blue">Date</th><th class="blue">Change</th>' +
-          '<th class="blue">New Position</th><th class="blue">Reason</th></tr>' +
-          body +
-        "</tbody></table>" +
-      "</section>"
+      '<div class="panel fade js-scroll-anim js-collapse" data-anim="fade">' +
+        '<h2 class="underlined pad">Position History<span class="arrow hover" id="history-trigger"></span></h2>' +
+        '<div class="js-collapse-content" style="display:none">' +
+          '<div class="ct-chart ct-perfect-fourth" id="position-chart" style="display:none"></div>' +
+          '<table id="history-table"><tbody id="history-table-body">' +
+            '<tr><th class="blue">Date</th><th class="blue">Change</th>' +
+            '<th class="blue">New Position</th><th class="blue">Reason</th></tr>' +
+            body +
+          "</tbody></table>" +
+        "</div>" +
+      "</div>"
     );
   }
 
@@ -408,14 +436,19 @@
       (next ? '<a href="' + DL.demonUrl(next.id) + '"><i class="fa fa-chevron-right" style="padding-left:5%"></i></a>' : "") +
       "</h1>";
 
-    // Click-to-play poster instead of an always-on <iframe>: a YouTube embed
-    // throws "configuration error 153" on a file:// page (no origin/referer),
-    // and this site has to work double-clicked. On file:// the click opens
-    // YouTube directly; when properly hosted it swaps in the real player.
+    // Hosted: embed the player directly, exactly like pointercrate
+    // (iframe.ratio-16-9, width:90% margin:15px 5%). On file:// a YouTube embed
+    // throws "configuration error 153" (no origin/referer) and the site has to
+    // work double-clicked, so there it's a click-to-play poster -> opens YouTube.
     var videoHtml = "";
     if (demon.videoUrl) {
       var embed = DL.embedVideo(demon.videoUrl);
-      if (embed && embed.url) {
+      var onFile = location.protocol === "file:";
+      if (embed && embed.url && !onFile) {
+        videoHtml =
+          '<iframe class="ratio-16-9" allowfullscreen style="width:90%; margin:15px 5%"' +
+          ' src="' + DL.escapeHtml(embed.url) + '" title="Showcase video">Showcase video</iframe>';
+      } else if (embed && embed.url) {
         var poster = demon.thumbnailUrl
           ? ' style="background-image:url(' + DL.escapeHtml(demon.thumbnailUrl) + ')"'
           : "";
@@ -440,14 +473,33 @@
       }
     }
 
+    // #level-info: the same fields pointercrate's demon page shows, in its order
+    // (GD data from data/demons.js `gd`, scraped from gdbrowser; missing for the
+    // 3 official RobTop levels, which aren't on the level servers).
+    var gd = demon.gd || {};
     var infoBits = [];
-    infoBits.push("<span><b>Tier</b><br>" + DL.tierLabel(tier) + "</span>");
-    if (demon.difficulty) infoBits.push("<span><b>Difficulty</b><br>" + DL.escapeHtml(DL.difficultyLabel(demon.difficulty)) + "</span>");
-    if (demon.levelId) infoBits.push("<span><b>Level ID</b><br>" + DL.escapeHtml(demon.levelId) + "</span>");
+    function bit(label, value) {
+      return "<span><b>" + label + "</b><br>" + value + "</span>";
+    }
+    if (demon.levelId) infoBits.push(bit("Level ID", DL.escapeHtml(demon.levelId)));
+    if (gd.length) infoBits.push(bit("Level Length", DL.escapeHtml(gd.length)));
+    if (gd.objects) infoBits.push(bit("Object Count", gd.objects >= 65535 ? "65535+" : String(gd.objects)));
+    infoBits.push(bit("In-Game Difficulty", DL.escapeHtml(gd.inGameDifficulty || DL.difficultyLabel(demon.difficulty))));
+    if (gd.gameVersion) infoBits.push(bit("Created In", DL.escapeHtml(gd.gameVersion)));
+    if (gd.song && /^\d+$/.test(String(gd.song.id))) {
+      var s = gd.song;
+      var songText = DL.escapeHtml(s.name + (s.artist ? " by " + s.artist : "") + " (ID " + s.id + ")");
+      var songHref =
+        s.link && s.link !== "-" ? s.link : "https://www.newgrounds.com/audio/listen/" + encodeURIComponent(s.id);
+      infoBits.push(
+        '<span style="width:100%"><b>Newgrounds Song</b><br>' +
+          '<a class="link" href="' + DL.escapeHtml(songHref) + '" target="_blank" rel="noopener">' + songText + "</a></span>"
+      );
+    }
     if (tier !== "legacy") {
-      infoBits.push("<span><b>Demonlist score</b><br>" + DL.scoreAt100(demon).toFixed(2) + "</span>");
+      infoBits.push(bit("Demonlist score (100%)", DL.scoreAt100(demon).toFixed(2)));
       if (req < 100) {
-        infoBits.push("<span><b>Score at " + req + "%</b><br>" + DL.recordScore(demon, req).toFixed(2) + "</span>");
+        infoBits.push(bit("Demonlist score (" + req + "%)", DL.recordScore(demon, req).toFixed(2)));
       }
     }
 

@@ -26,6 +26,13 @@
 // /api/levels/<id> -> .Showcase, a YouTube id) and that video's YouTube still
 // (maxresdefault, else hqdefault). If a future level has no showcase, leave
 // thumbnailUrl null and the panel falls back to a difficulty-coloured card.
+//
+// `gd`: extra level facts for the demon page's #level-info panel, scraped from
+// gdbrowser (/api/level/<id>) on 2026-09-01 - { length, objects?, gameVersion,
+// inGameDifficulty, song: { id, name, artist, link? } }. Absent for the 3
+// official levels. objects is omitted when gdbrowser returns 0 (its cap is
+// 65535, shown as "65535+"). song with a non-numeric id (RobTop soundtrack) is
+// not rendered, matching pointercrate.
 // -----------------------------------------------------------------------------
 
 window.DEMONS = [
@@ -52,7 +59,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IN"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "10007166",
+        "name": "GHOUL",
+        "artist": "Camellia",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 10565740,
@@ -77,7 +97,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 24746,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "467339",
+        "name": "At the Speed of Light",
+        "artist": "Dimrain47",
+        "link": "https://geometrydashcontent.b-cdn.net/songs/467339.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 93752979,
@@ -102,7 +135,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IN"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "1229116",
+        "name": "CYTOKINESIS / SFX /",
+        "artist": "Albee",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 89976481,
@@ -127,7 +173,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "657081",
+        "name": "Lit Fuse",
+        "artist": "Cacola",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 114933189,
@@ -152,7 +211,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 6739,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "1236581",
+        "name": "...and Yet It Goes Nowhere",
+        "artist": "Llaappssee",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 61137742,
@@ -177,7 +249,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IN"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "845356",
+        "name": "Helvetican - Bufu",
+        "artist": "SixImpala",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 37259527,
@@ -202,7 +287,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "684652",
+        "name": "Milkshake",
+        "artist": "meganeko",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 126213470,
@@ -227,7 +325,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 26278,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "1132447",
+        "name": "Creo - Flow",
+        "artist": "CreoMusic",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 32885972,
@@ -252,7 +363,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "693041",
+        "name": "Dark Matter Suite (1f1n1ty + LOrbSheddy Remix)",
+        "artist": "1f1n1ty",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 4706930,
@@ -277,7 +401,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "467267",
+        "name": "Ludicrous Speed - F-777",
+        "artist": "F-777",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 59858021,
@@ -302,7 +438,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "793815",
+        "name": "By Day By Night",
+        "artist": "1f1n1ty",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 7054561,
@@ -327,7 +476,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 14871,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "587870",
+        "name": "NK - Poltergeist (OLD mix)",
+        "artist": "Rukkus",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 56568010,
@@ -358,7 +520,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "718171",
+        "name": "cYsmix - Classic Pursuit",
+        "artist": "cysmix",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 4545425,
@@ -383,7 +558,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "1.9",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "482872",
+        "name": "KzX - Stalemate",
+        "artist": "Kayoszx",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 43945511,
@@ -408,7 +595,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "284253",
+        "name": "Blippblipp (modern 8bit)",
+        "artist": "Bunnymajs",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 11402965,
@@ -433,7 +633,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Hard Demon",
+      "song": {
+        "id": "478283",
+        "name": "-Haunted woods-",
+        "artist": "Waterflame",
+        "link": "http://audio.ngfiles.com/478000/478283_-Haunted-woods-.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 44062068,
@@ -464,7 +676,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Hard Demon",
+      "song": {
+        "id": "701013",
+        "name": "Whats a Future Funk?",
+        "artist": "LemKuuja",
+        "link": "https://geometrydashcontent.b-cdn.net/songs/701013.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 4284013,
@@ -501,7 +726,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Hard Demon",
+      "song": {
+        "id": "533927",
+        "name": "NK - Nine Circles",
+        "artist": "Rukkus",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 104968496,
@@ -526,7 +763,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Hard Demon",
+      "song": {
+        "id": "1298724",
+        "name": "[TIDAL WAVE] Dion Timmer - Shiawase VIP (Vorlex Remix)",
+        "artist": "Vorlexium",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 102343052,
@@ -551,7 +801,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Hard Demon",
+      "song": {
+        "id": "865364",
+        "name": "Teminite & MDK - Space Invaders",
+        "artist": "Teminite",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 96096712,
@@ -576,7 +839,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Hard Demon",
+      "song": {
+        "id": "767005",
+        "name": "-Cant Sleep-",
+        "artist": "Waterflame",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 47611766,
@@ -601,7 +877,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "772055",
+        "name": "Aeolia",
+        "artist": "1f1n1ty",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 25706351,
@@ -626,7 +915,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": null
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "576177",
+        "name": "---Accelerate---",
+        "artist": "Acid-Notation",
+        "link": "https://geometrydashcontent.b-cdn.net/songs/576177.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 69087510,
@@ -651,7 +952,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "109650",
+        "name": "Operation: Evolution",
+        "artist": "Dimrain47",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 40202837,
@@ -676,7 +990,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 61098,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "683996",
+        "name": "Time Leaper",
+        "artist": "hinkik",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 118509879,
@@ -707,7 +1034,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "1382827",
+        "name": "Slash Inferno",
+        "artist": "Teminite",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 61417747,
@@ -732,7 +1072,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 47915,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "Level 8",
+        "name": "Time Machine",
+        "artist": "Waterflame"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 17924880,
@@ -757,7 +1109,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "675124",
+        "name": "The Undertakers Daughter instrumental",
+        "artist": "steampianist",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 10972106,
@@ -782,7 +1146,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "1.9",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "493898",
+        "name": "[J] - Solar Wind",
+        "artist": "Jumper",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 34085027,
@@ -807,7 +1183,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "715825",
+        "name": "Beep Beep",
+        "artist": "Schtiffles",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 95683886,
@@ -832,7 +1221,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Medium",
+      "objects": 32656,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "1209742",
+        "name": "?? ??s???????? <loop>",
+        "artist": "Xorberax",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 220369,
@@ -857,7 +1259,18 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "Pre-1.7",
+      "inGameDifficulty": "Medium Demon",
+      "song": {
+        "id": "Level 12",
+        "name": "Theory of Everything",
+        "artist": "DJ-Nate"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 3,
@@ -925,7 +1338,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "587069",
+        "name": "-Endgame-",
+        "artist": "Waterflame",
+        "link": "http://audio.ngfiles.com/587000/587069_-Endgame-.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 8660411,
@@ -950,7 +1375,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "gameVersion": "1.9",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "685746",
+        "name": "Death Moon",
+        "artist": "SoundHolicK",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 63277477,
@@ -975,7 +1412,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 31498,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "620959",
+        "name": "-Stalker-",
+        "artist": "Waterflame",
+        "link": "http://audio.ngfiles.com/620000/620959_-Stalker-.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 111286661,
@@ -1000,7 +1450,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "569938",
+        "name": "Rip it",
+        "artist": "Xtrullor",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 7116121,
@@ -1025,7 +1488,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "477060",
+        "name": "~NK~ Problematic",
+        "artist": "Rukkus",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 90475473,
@@ -1050,7 +1525,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "1167964",
+        "name": "Beethoven - Moonlight Sonata 3rd Movement (meganeko Remix) [2022 version]",
+        "artist": "meganeko",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 2,
@@ -1106,7 +1594,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "951493",
+        "name": "Something Different (feat. Talurre)",
+        "artist": "DerpCatOfficial",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 14850167,
@@ -1131,7 +1632,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "576166",
+        "name": "This Game RmX Off Vocal",
+        "artist": "dj-Jo",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 14000484,
@@ -1156,7 +1669,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 44824,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "649039",
+        "name": "NK - Nine Circles (Xtrullor Remix)",
+        "artist": "Xtrullor",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 9864147,
@@ -1181,7 +1707,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.0",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "322053",
+        "name": "~NK~ Spaceman",
+        "artist": "Rukkus",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 1,
@@ -1237,7 +1775,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 4833,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "Level 8",
+        "name": "Time Machine",
+        "artist": "Waterflame"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 82804029,
@@ -1262,7 +1812,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 31233,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "1151112",
+        "name": "Endless Embrace Remake",
+        "artist": "flaaroni",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 1347537,
@@ -1287,7 +1850,18 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "1.7",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "Level 14",
+        "name": "Clubstep",
+        "artist": "DJ-Nate"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 49901047,
@@ -1312,7 +1886,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 26000,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "595087",
+        "name": "End of the World",
+        "artist": "Tagiito",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 13037894,
@@ -1337,7 +1924,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 10648,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "621144",
+        "name": "TheFatRat - Infinite Power",
+        "artist": "ThisIsTheFatRat",
+        "link": "http://audio.ngfiles.com/621000/621144_TheFatRat---Infinite-Power.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 57012656,
@@ -1362,7 +1962,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "695247",
+        "name": "Asau",
+        "artist": "1f1n1ty",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 89886591,
@@ -1387,7 +2000,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 42043,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "1191782",
+        "name": "BIKE",
+        "artist": "tangermusic",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 28352064,
@@ -1412,7 +2038,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "715772",
+        "name": "Infinite Dungeon 1 & 2 (1f1n1ty Remix)",
+        "artist": "1f1n1ty",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 76582313,
@@ -1437,7 +2076,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "696770",
+        "name": "Night walk extended",
+        "artist": "Cursedsnake",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 848722,
@@ -1462,7 +2114,18 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "1.7",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "Level 15",
+        "name": "Electrodynamix",
+        "artist": "DJ-Nate"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 80790301,
@@ -1487,7 +2150,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "822787",
+        "name": "Faux Tales - Beacon",
+        "artist": "TheArcadium",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 127078077,
@@ -1512,7 +2187,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 31778,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "865054",
+        "name": "Solace (The Alpha Axiom EP)",
+        "artist": "KaixoMusic",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 56587109,
@@ -1543,7 +2231,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "CA"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Medium",
+      "objects": 50905,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "482542",
+        "name": "Cosmic Dolphin",
+        "artist": "megawolf77",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 128665322,
@@ -1568,7 +2269,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 15034,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "510853",
+        "name": "Dr. Phonics - Code Red",
+        "artist": "DrPhonics",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 56210242,
@@ -1593,7 +2307,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 46505,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "366026",
+        "name": "KgZ- Black Snow (Violin Lead)",
+        "artist": "KgZ",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 5904109,
@@ -1618,7 +2345,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 11100,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "587069",
+        "name": "-Endgame-",
+        "artist": "Waterflame",
+        "link": "http://audio.ngfiles.com/587000/587069_-Endgame-.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 566659,
@@ -1643,7 +2383,18 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "Pre-1.7",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "Level 8",
+        "name": "Time Machine",
+        "artist": "Waterflame"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 126762295,
@@ -1668,7 +2419,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "XL",
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "550054",
+        "name": "-Swirl!-",
+        "artist": "Waterflame",
+        "link": "http://audio.ngfiles.com/550000/550054_-Swirl-.mp3"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 55520,
@@ -1693,7 +2456,19 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 3527,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "Level 4",
+        "name": "Dry Out",
+        "artist": "DJVI"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 88494611,
@@ -1718,7 +2493,20 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": null
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "1068034",
+        "name": "eternal",
+        "artist": "korewakosu",
+        "link": "-"
+      },
+      "songOfficial": false
+    }
   },
   {
     "id": 13519,
@@ -1743,6 +2531,17 @@ window.DEMONS = [
         "nationality": "US",
         "subdivision": "IL"
       }
-    ]
+    ],
+    "gd": {
+      "length": "Long",
+      "gameVersion": "1.7",
+      "inGameDifficulty": "Easy Demon",
+      "song": {
+        "id": "Level 3",
+        "name": "Polargeist",
+        "artist": "Step"
+      },
+      "songOfficial": false
+    }
   }
 ];

@@ -126,10 +126,11 @@ DL.positionHistoryFor = function (demon) {
     }
     if (before == null || after === before) return;
 
+    // reason strings mirror pointercrate's movements-reason.* exactly
     var who = ev.name || "A demon";
     var reason;
     if (ev.kind === "move" && ev.id === demon.id) {
-      reason = ev.text || (ev.to < ev.from ? "Moved up the list" : "Moved down the list");
+      reason = ev.text || "Moved";
     } else if (ev.kind === "add") {
       reason = who + " was added above";
     } else if (ev.kind === "remove") {

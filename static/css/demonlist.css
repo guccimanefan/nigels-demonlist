@@ -234,42 +234,26 @@ tr:nth-child(even) {
   font-variant: small-caps;
 }
 
-/* --- demon page: position history ----------------------------------- */
+/* --- demon page: position history (pointercrate's #history-table) ---- */
 
-.position-history td:first-child {
-  white-space: nowrap;
-}
-
-.position-history .ph-change {
+#history-table {
   font-weight: bold;
-  white-space: nowrap;
 }
 
-.position-history .ph-rise {
-  color: #2f9e44;
+#history-table tr {
+  background: var(--color-warn-bg);
+  color: var(--color-warn-text);
 }
 
-.position-history .ph-fall {
-  color: #c0392b;
+/* same colours as the info boxes */
+#history-table tr.moved-up {
+  background: var(--color-ok-bg);
+  color: var(--color-ok-text);
 }
 
-.position-history .ph-flat {
-  opacity: 0.5;
-  font-weight: normal;
-}
-
-/* row tint by what happened (beats the generic tr:nth-child(even) rule by
-   painting the cells, which that rule doesn't touch) */
-.position-history > tbody > tr.ph-add > td {
-  background: #fdf7e3;
-}
-
-.position-history > tbody > tr.ph-up > td {
-  background: #ecf8ef;
-}
-
-.position-history > tbody > tr.ph-down > td {
-  background: #fdeeec;
+#history-table tr.moved-down {
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
 }
 
 /* --- changelog ------------------------------------------------------- */
