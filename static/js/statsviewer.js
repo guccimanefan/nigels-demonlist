@@ -356,9 +356,14 @@
       }
       markActive();
 
-      var nameHtml = DL.flagSpan(p.nationality) + "<span>" + DL.escapeHtml(p.name) + "</span>";
-      if (!p.nationality) nameHtml += "<span></span>";
-      el("player-name").innerHTML = nameHtml;
+      // player detail header is the one place we show the state flag too,
+      // to the right of the name (country flag | name | state flag)
+      el("player-name").innerHTML =
+        DL.flagSpan(p.nationality) +
+        "<span>" + DL.escapeHtml(p.name) + "</span>" +
+        (p.nationality && p.subdivision
+          ? DL.subdivisionFlagSpan(p.nationality, p.subdivision)
+          : "<span></span>");
 
       el("rank").innerText = "#" + p.rank;
       el("score").innerText = p.score.toFixed(2);

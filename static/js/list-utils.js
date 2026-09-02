@@ -224,6 +224,7 @@ DL.COUNTRY_NAMES = {
 DL.SUBDIVISION_NAMES = {
   "US-IL": "Illinois",
   "US-IN": "Indiana",
+  "US-CA": "California",
 };
 
 // Continents the map/continent filter knows about, in the order the SVG groups

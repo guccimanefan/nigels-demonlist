@@ -22,6 +22,17 @@ window.CHANGELOG = [
     date: "2026-09-01",
     items: [
       {
+        kind: "add",
+        demon: "HeLL",
+        demonId: 25706351,
+        at: 23,
+        text: "jd's clear - a Serponge Medium Demon",
+      },
+      {
+        kind: "note",
+        text: "Jack (now listed from California) logged clears on Future Funk, Nine Circles, Skeletal Shenanigans, DeCode, Deadlocked, ToE2 and Clubstep.",
+      },
+      {
         kind: "note",
         text: "List created - 65 demons imported from our gdladder.com profiles (every non-platformer completion), ranked hardest-first by GD Demon Ladder's difficulty rating.",
       },

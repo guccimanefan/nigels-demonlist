@@ -25,9 +25,10 @@
       : "";
     var kind = item.kind || "note";
     var body;
-    if (kind === "add") body = name + " added" + (item.at != null ? " at #" + item.at : "");
-    else if (kind === "move") body = name + " moved from #" + item.from + " to #" + item.to;
-    else if (kind === "remove") body = name + " removed" + (item.from != null ? " (was #" + item.from + ")" : "");
+    // the badge already says Added / Moved / Removed, so the body doesn't repeat it
+    if (kind === "add") body = name + (item.at != null ? " at #" + item.at : "");
+    else if (kind === "move") body = name + " from #" + item.from + " to #" + item.to;
+    else if (kind === "remove") body = name + (item.from != null ? " (was #" + item.from + ")" : "");
     else body = "";
     if (item.text) body += (body ? " &mdash; " : "") + DL.escapeHtml(item.text);
     var labels = { add: "Added", move: "Moved", remove: "Removed", note: "Note" };

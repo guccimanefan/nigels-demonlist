@@ -11,22 +11,21 @@
 //
 // publisher/creators = the level's real GD creator. 'verifier' is
 // repurposed to mean "who of us cleared it first": Nigel wins any tie,
-// else Juice (per instructions). Four levels have more than one of us on
-// them for that reason: Deadlocked, Nine Circles, Magma Bound, phjork.
+// else Juice (per instructions). Several levels have more than one of us on
+// them for that reason.
 //
 // nationality/subdivision: Nigel = US/IL (Illinois), Juice = US/IN
-// (Indiana), everyone else = US with no subdivision, as given.
+// (Indiana), Jack = US/CA (California), the rest = US with no subdivision.
 //
 // position is ranked by gdladder's own difficulty *rating* (the number,
-// hardest first). `difficulty` is gdladder's categorical demon tier:
-// "Easy" | "Medium" | "Hard" | "Insane" | "Extreme" | "Official" (RobTop's
-// three).
+// hardest first) - re-sort the whole array by `rating` and renumber when a
+// demon is added. `difficulty` is gdladder's categorical tier: "Easy" |
+// "Medium" | "Hard" | "Insane" | "Extreme" | "Official" (RobTop's three).
 //
 // videoUrl / thumbnailUrl: the level's GDDL "Showcase" video (gdladder.com
 // /api/levels/<id> -> .Showcase, a YouTube id) and that video's YouTube still
-// (maxresdefault, or hqdefault for the few with no maxres), pulled 2026-09-01.
-// All 65 had a showcase. If a future level has none, leave thumbnailUrl null
-// and the panel falls back to a difficulty-coloured name card.
+// (maxresdefault, else hqdefault). If a future level has no showcase, leave
+// thumbnailUrl null and the panel falls back to a difficulty-coloured card.
 // -----------------------------------------------------------------------------
 
 window.DEMONS = [
@@ -226,7 +225,7 @@ window.DEMONS = [
         "player": "Jack",
         "progress": 100,
         "nationality": "US",
-        "subdivision": null
+        "subdivision": "CA"
       }
     ]
   },
@@ -326,7 +325,7 @@ window.DEMONS = [
         "player": "Jack",
         "progress": 100,
         "nationality": "US",
-        "subdivision": null
+        "subdivision": "CA"
       }
     ]
   },
@@ -357,7 +356,7 @@ window.DEMONS = [
         "player": "Jack",
         "progress": 100,
         "nationality": "US",
-        "subdivision": null
+        "subdivision": "CA"
       }
     ]
   },
@@ -458,6 +457,12 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": "IL"
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
@@ -489,6 +494,12 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": null
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
@@ -593,8 +604,33 @@ window.DEMONS = [
     ]
   },
   {
-    "id": 69087510,
+    "id": 25706351,
     "position": 23,
+    "name": "HeLL",
+    "difficulty": "Medium",
+    "rating": 8.05,
+    "publisher": "Serponge",
+    "creators": [
+      "Serponge"
+    ],
+    "verifier": "jd",
+    "videoUrl": "https://www.youtube.com/watch?v=gTtsrzNUJM8",
+    "thumbnailUrl": "https://i.ytimg.com/vi/gTtsrzNUJM8/maxresdefault.jpg",
+    "levelId": 25706351,
+    "description": "Trying a different style ! Shig made the gameplay, I made the design, hope you enjoy, rate demon ! ayy verified after 1 death at 92% ;3;",
+    "requirementPercent": 100,
+    "records": [
+      {
+        "player": "jd",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": null
+      }
+    ]
+  },
+  {
+    "id": 69087510,
+    "position": 24,
     "name": "evolutionary theory",
     "difficulty": "Medium",
     "rating": 7.84,
@@ -619,7 +655,7 @@ window.DEMONS = [
   },
   {
     "id": 40202837,
-    "position": 24,
+    "position": 25,
     "name": "Rising Down",
     "difficulty": "Medium",
     "rating": 6.94,
@@ -644,7 +680,7 @@ window.DEMONS = [
   },
   {
     "id": 118509879,
-    "position": 25,
+    "position": 26,
     "name": "Skeletal Shenanigans",
     "difficulty": "Medium",
     "rating": 6.66,
@@ -664,12 +700,18 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": "IL"
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
   {
     "id": 61417747,
-    "position": 26,
+    "position": 27,
     "name": "potal",
     "difficulty": "Medium",
     "rating": 6.38,
@@ -694,7 +736,7 @@ window.DEMONS = [
   },
   {
     "id": 17924880,
-    "position": 27,
+    "position": 28,
     "name": "Lonely travel",
     "difficulty": "Medium",
     "rating": 6.23,
@@ -719,7 +761,7 @@ window.DEMONS = [
   },
   {
     "id": 10972106,
-    "position": 28,
+    "position": 29,
     "name": "Solar Circles",
     "difficulty": "Medium",
     "rating": 5.92,
@@ -744,7 +786,7 @@ window.DEMONS = [
   },
   {
     "id": 34085027,
-    "position": 29,
+    "position": 30,
     "name": "B",
     "difficulty": "Medium",
     "rating": 5.81,
@@ -769,7 +811,7 @@ window.DEMONS = [
   },
   {
     "id": 95683886,
-    "position": 30,
+    "position": 31,
     "name": "penguin industries",
     "difficulty": "Medium",
     "rating": 5.31,
@@ -794,7 +836,7 @@ window.DEMONS = [
   },
   {
     "id": 220369,
-    "position": 31,
+    "position": 32,
     "name": "Theory of Jumping",
     "difficulty": "Medium",
     "rating": 4.77,
@@ -819,7 +861,7 @@ window.DEMONS = [
   },
   {
     "id": 3,
-    "position": 32,
+    "position": 33,
     "name": "Deadlocked",
     "difficulty": "Official",
     "rating": 4.68,
@@ -845,12 +887,18 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": null
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
   {
     "id": 2997354,
-    "position": 33,
+    "position": 34,
     "name": "DeCode",
     "difficulty": "Easy",
     "rating": 4.11,
@@ -870,12 +918,18 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": "IL"
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
   {
     "id": 8660411,
-    "position": 34,
+    "position": 35,
     "name": "Death Moon",
     "difficulty": "Easy",
     "rating": 3.81,
@@ -900,7 +954,7 @@ window.DEMONS = [
   },
   {
     "id": 63277477,
-    "position": 35,
+    "position": 36,
     "name": "well being spot",
     "difficulty": "Easy",
     "rating": 3.64,
@@ -925,7 +979,7 @@ window.DEMONS = [
   },
   {
     "id": 111286661,
-    "position": 36,
+    "position": 37,
     "name": "MUNDUS SANGUINANS",
     "difficulty": "Easy",
     "rating": 3.23,
@@ -950,7 +1004,7 @@ window.DEMONS = [
   },
   {
     "id": 7116121,
-    "position": 37,
+    "position": 38,
     "name": "Problematic",
     "difficulty": "Easy",
     "rating": 3.12,
@@ -975,7 +1029,7 @@ window.DEMONS = [
   },
   {
     "id": 90475473,
-    "position": 38,
+    "position": 39,
     "name": "Change of Scene",
     "difficulty": "Easy",
     "rating": 3.04,
@@ -1000,7 +1054,7 @@ window.DEMONS = [
   },
   {
     "id": 2,
-    "position": 39,
+    "position": 40,
     "name": "Theory of Everything 2",
     "difficulty": "Official",
     "rating": 3.04,
@@ -1020,12 +1074,18 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": "IL"
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
   {
     "id": 77292103,
-    "position": 40,
+    "position": 41,
     "name": "White Space",
     "difficulty": "Easy",
     "rating": 2.89,
@@ -1050,7 +1110,7 @@ window.DEMONS = [
   },
   {
     "id": 14850167,
-    "position": 41,
+    "position": 42,
     "name": "Horizon",
     "difficulty": "Easy",
     "rating": 2.89,
@@ -1075,7 +1135,7 @@ window.DEMONS = [
   },
   {
     "id": 14000484,
-    "position": 42,
+    "position": 43,
     "name": "Retro Circles",
     "difficulty": "Easy",
     "rating": 2.89,
@@ -1100,7 +1160,7 @@ window.DEMONS = [
   },
   {
     "id": 9864147,
-    "position": 43,
+    "position": 44,
     "name": "Space Circles",
     "difficulty": "Easy",
     "rating": 2.88,
@@ -1125,7 +1185,7 @@ window.DEMONS = [
   },
   {
     "id": 1,
-    "position": 44,
+    "position": 45,
     "name": "Clubstep",
     "difficulty": "Official",
     "rating": 2.83,
@@ -1145,12 +1205,18 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": "IL"
+      },
+      {
+        "player": "Jack",
+        "progress": 100,
+        "nationality": "US",
+        "subdivision": "CA"
       }
     ]
   },
   {
     "id": 184880,
-    "position": 45,
+    "position": 46,
     "name": "Ruined Planet",
     "difficulty": "Easy",
     "rating": 2.77,
@@ -1175,7 +1241,7 @@ window.DEMONS = [
   },
   {
     "id": 82804029,
-    "position": 46,
+    "position": 47,
     "name": "Endless Descent",
     "difficulty": "Easy",
     "rating": 2.71,
@@ -1200,7 +1266,7 @@ window.DEMONS = [
   },
   {
     "id": 1347537,
-    "position": 47,
+    "position": 48,
     "name": "invisible clubstep",
     "difficulty": "Easy",
     "rating": 2.61,
@@ -1225,7 +1291,7 @@ window.DEMONS = [
   },
   {
     "id": 49901047,
-    "position": 48,
+    "position": 49,
     "name": "End Line",
     "difficulty": "Easy",
     "rating": 1.99,
@@ -1250,7 +1316,7 @@ window.DEMONS = [
   },
   {
     "id": 13037894,
-    "position": 49,
+    "position": 50,
     "name": "infinite circles",
     "difficulty": "Easy",
     "rating": 1.97,
@@ -1275,7 +1341,7 @@ window.DEMONS = [
   },
   {
     "id": 57012656,
-    "position": 50,
+    "position": 51,
     "name": "Ship",
     "difficulty": "Easy",
     "rating": 1.92,
@@ -1300,7 +1366,7 @@ window.DEMONS = [
   },
   {
     "id": 89886591,
-    "position": 51,
+    "position": 52,
     "name": "iSpyWithMyLittleEye",
     "difficulty": "Easy",
     "rating": 1.87,
@@ -1325,7 +1391,7 @@ window.DEMONS = [
   },
   {
     "id": 28352064,
-    "position": 52,
+    "position": 53,
     "name": "The Farewell",
     "difficulty": "Easy",
     "rating": 1.78,
@@ -1350,7 +1416,7 @@ window.DEMONS = [
   },
   {
     "id": 76582313,
-    "position": 53,
+    "position": 54,
     "name": "The Long Walk Home",
     "difficulty": "Easy",
     "rating": 1.72,
@@ -1375,7 +1441,7 @@ window.DEMONS = [
   },
   {
     "id": 848722,
-    "position": 54,
+    "position": 55,
     "name": "Lights And Thunder",
     "difficulty": "Easy",
     "rating": 1.62,
@@ -1400,7 +1466,7 @@ window.DEMONS = [
   },
   {
     "id": 80790301,
-    "position": 55,
+    "position": 56,
     "name": "Permafrost Mountain",
     "difficulty": "Easy",
     "rating": 1.59,
@@ -1425,7 +1491,7 @@ window.DEMONS = [
   },
   {
     "id": 127078077,
-    "position": 56,
+    "position": 57,
     "name": "Volcano",
     "difficulty": "Easy",
     "rating": 1.24,
@@ -1450,7 +1516,7 @@ window.DEMONS = [
   },
   {
     "id": 56587109,
-    "position": 57,
+    "position": 58,
     "name": "phjork",
     "difficulty": "Easy",
     "rating": 1.2,
@@ -1475,13 +1541,13 @@ window.DEMONS = [
         "player": "Jack",
         "progress": 100,
         "nationality": "US",
-        "subdivision": null
+        "subdivision": "CA"
       }
     ]
   },
   {
     "id": 128665322,
-    "position": 58,
+    "position": 59,
     "name": "red alert",
     "difficulty": "Easy",
     "rating": 1.18,
@@ -1506,7 +1572,7 @@ window.DEMONS = [
   },
   {
     "id": 56210242,
-    "position": 59,
+    "position": 60,
     "name": "Shiver",
     "difficulty": "Easy",
     "rating": 1.16,
@@ -1531,7 +1597,7 @@ window.DEMONS = [
   },
   {
     "id": 5904109,
-    "position": 60,
+    "position": 61,
     "name": "Platinum Adventure",
     "difficulty": "Easy",
     "rating": 1.13,
@@ -1556,7 +1622,7 @@ window.DEMONS = [
   },
   {
     "id": 566659,
-    "position": 61,
+    "position": 62,
     "name": "demon mixed",
     "difficulty": "Easy",
     "rating": 1.11,
@@ -1581,7 +1647,7 @@ window.DEMONS = [
   },
   {
     "id": 126762295,
-    "position": 62,
+    "position": 63,
     "name": "SCORIGAMI",
     "difficulty": "Easy",
     "rating": 1.09,
@@ -1606,7 +1672,7 @@ window.DEMONS = [
   },
   {
     "id": 55520,
-    "position": 63,
+    "position": 64,
     "name": "THE LIGHTNING ROAD",
     "difficulty": "Easy",
     "rating": 1.05,
@@ -1631,7 +1697,7 @@ window.DEMONS = [
   },
   {
     "id": 88494611,
-    "position": 64,
+    "position": 65,
     "name": "Eternal",
     "difficulty": "Easy",
     "rating": 1.04,
@@ -1656,7 +1722,7 @@ window.DEMONS = [
   },
   {
     "id": 13519,
-    "position": 65,
+    "position": 66,
     "name": "The Nightmare",
     "difficulty": "Easy",
     "rating": 1.04,
