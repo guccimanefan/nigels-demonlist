@@ -234,6 +234,44 @@ tr:nth-child(even) {
   font-variant: small-caps;
 }
 
+/* --- demon page: position history ----------------------------------- */
+
+.position-history td:first-child {
+  white-space: nowrap;
+}
+
+.position-history .ph-change {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.position-history .ph-rise {
+  color: #2f9e44;
+}
+
+.position-history .ph-fall {
+  color: #c0392b;
+}
+
+.position-history .ph-flat {
+  opacity: 0.5;
+  font-weight: normal;
+}
+
+/* row tint by what happened (beats the generic tr:nth-child(even) rule by
+   painting the cells, which that rule doesn't touch) */
+.position-history > tbody > tr.ph-add > td {
+  background: #fdf7e3;
+}
+
+.position-history > tbody > tr.ph-up > td {
+  background: #ecf8ef;
+}
+
+.position-history > tbody > tr.ph-down > td {
+  background: #fdeeec;
+}
+
 /* --- changelog ------------------------------------------------------- */
 
 .changelog-list {

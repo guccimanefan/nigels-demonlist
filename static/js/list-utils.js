@@ -37,6 +37,115 @@ DL.tierOf = function (position) {
   return "legacy";
 };
 
+// -----------------------------------------------------------------------------
+// Per-demon Position History (pointercrate's demon-page table). Derived purely
+// from window.CHANGELOG (data/changelog.js) so there's a single source of
+// truth: log an add / move / remove there and every affected demon's history
+// updates itself, including "X was added above" style rows for demons that
+// didn't move themselves but got shifted.
+//
+// Contract: every position change must be logged in data/changelog.js as an
+// `add` (with `at`), `move` (with `from` + `to`) or `remove` (with `from`)
+// item. The initial ordering is reconstructed by undoing every logged event
+// from the current list, so an unlogged reorder would desync it.
+//
+// Returns [{ date, position, delta, reason }] oldest-first; `delta` is the
+// signed change from the previous row (0 on the first row).
+// -----------------------------------------------------------------------------
+DL.positionHistoryFor = function (demon) {
+  var log = window.CHANGELOG || [];
+
+  // CHANGELOG is newest-first (entries, and items within an entry) - flip both
+  // to get position-affecting events oldest-first.
+  var events = [];
+  log.slice().reverse().forEach(function (entry) {
+    (entry.items || []).slice().reverse().forEach(function (it) {
+      if (it.kind === "add" && it.at != null) {
+        events.push({ date: entry.date, kind: "add", id: it.demonId, name: it.demon, at: it.at, text: it.text });
+      } else if (it.kind === "move" && it.from != null && it.to != null) {
+        events.push({ date: entry.date, kind: "move", id: it.demonId, name: it.demon, from: it.from, to: it.to, text: it.text });
+      } else if (it.kind === "remove" && it.from != null) {
+        events.push({ date: entry.date, kind: "remove", id: it.demonId, name: it.demon, from: it.from, text: it.text });
+      }
+    });
+  });
+
+  var created = (window.SITE && window.SITE.listCreated) || (events[0] && events[0].date) || null;
+
+  // Start from the current ordering and rewind it to the list's first day by
+  // undoing every event, newest first.
+  var order = DL.sortedDemons().map(function (d) { return { id: d.id, name: d.name }; });
+  function indexOfId(id) {
+    for (var i = 0; i < order.length; i++) if (order[i].id === id) return i;
+    return -1;
+  }
+  events.slice().reverse().forEach(function (ev) {
+    var i;
+    if (ev.kind === "add") {
+      i = indexOfId(ev.id);
+      if (i !== -1) order.splice(i, 1);
+    } else if (ev.kind === "move") {
+      i = indexOfId(ev.id);
+      if (i !== -1) order.splice(Math.min(ev.from - 1, order.length - 1), 0, order.splice(i, 1)[0]);
+    } else if (ev.kind === "remove") {
+      order.splice(Math.min(ev.from - 1, order.length), 0, { id: ev.id, name: ev.name });
+    }
+  });
+
+  function posOf(id) {
+    var i = indexOfId(id);
+    return i === -1 ? null : i + 1;
+  }
+
+  var rows = [];
+  var selfAdded = events.some(function (ev) { return ev.kind === "add" && ev.id === demon.id; });
+  if (!selfAdded) {
+    var p0 = posOf(demon.id);
+    if (p0 != null) rows.push({ date: created, position: p0, reason: "Added to list" });
+  }
+
+  events.forEach(function (ev) {
+    var before = posOf(demon.id);
+
+    if (ev.kind === "add") {
+      order.splice(Math.max(0, Math.min(ev.at - 1, order.length)), 0, { id: ev.id, name: ev.name });
+    } else if (ev.kind === "move") {
+      var mi = indexOfId(ev.id);
+      if (mi !== -1) order.splice(Math.max(0, Math.min(ev.to - 1, order.length - 1)), 0, order.splice(mi, 1)[0]);
+    } else if (ev.kind === "remove") {
+      var ri = indexOfId(ev.id);
+      if (ri !== -1) order.splice(ri, 1);
+    }
+
+    var after = posOf(demon.id);
+    if (after == null) return;
+
+    if (ev.kind === "add" && ev.id === demon.id) {
+      rows.push({ date: ev.date, position: after, reason: "Added to list" });
+      return;
+    }
+    if (before == null || after === before) return;
+
+    var who = ev.name || "A demon";
+    var reason;
+    if (ev.kind === "move" && ev.id === demon.id) {
+      reason = ev.text || (ev.to < ev.from ? "Moved up the list" : "Moved down the list");
+    } else if (ev.kind === "add") {
+      reason = who + " was added above";
+    } else if (ev.kind === "remove") {
+      reason = who + " was removed";
+    } else {
+      reason = who + (after > before ? " was moved up past this demon" : " was moved down past this demon");
+    }
+    rows.push({ date: ev.date, position: after, reason: reason });
+  });
+
+  rows.forEach(function (r, i) {
+    r.delta = i === 0 ? 0 : r.position - rows[i - 1].position;
+  });
+  return rows;
+};
+
 // gdladder difficulty tier ("Easy".."Extreme"|"Official") -> css modifier + label
 DL.difficultyClass = function (difficulty) {
   return "diff-" + String(difficulty || "extreme").toLowerCase();

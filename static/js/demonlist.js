@@ -316,6 +316,45 @@
     return parts.join(", ");
   }
 
+  // pointercrate-style Position History table, from DL.positionHistoryFor
+  // (derived from data/changelog.js). Hidden entirely if there's nothing to show.
+  function positionHistoryHtml(demon) {
+    var rows = DL.positionHistoryFor(demon);
+    if (!rows.length) return "";
+
+    var body = rows
+      .map(function (r) {
+        var rowCls =
+          r.delta === 0 ? "ph-add" : r.delta < 0 ? "ph-up" : "ph-down";
+        var change =
+          r.delta === 0
+            ? '<span class="ph-change ph-flat">&ndash;</span>'
+            : r.delta < 0
+            ? '<span class="ph-change ph-rise">&#9650; ' + Math.abs(r.delta) + "</span>"
+            : '<span class="ph-change ph-fall">&#9660; ' + r.delta + "</span>";
+        return (
+          '<tr class="' + rowCls + '">' +
+            "<td>" + DL.escapeHtml(DL.formatDate(r.date)) + "</td>" +
+            "<td>" + change + "</td>" +
+            "<td>#" + r.position + "</td>" +
+            "<td>" + DL.escapeHtml(r.reason) + "</td>" +
+          "</tr>"
+        );
+      })
+      .join("");
+
+    return (
+      '<section class="panel fade js-scroll-anim" data-anim="fade">' +
+        '<div class="underlined pad"><h2>Position History</h2></div>' +
+        '<table class="position-history"><tbody>' +
+          '<tr><th class="blue">Date</th><th class="blue">Change</th>' +
+          '<th class="blue">New Position</th><th class="blue">Reason</th></tr>' +
+          body +
+        "</tbody></table>" +
+      "</section>"
+    );
+  }
+
   function recordsTableHtml(demon) {
     var records = (demon.records || []).slice().sort(function (a, b) {
       return b.progress - a.progress || a.player.localeCompare(b.player);
@@ -419,6 +458,7 @@
         videoHtml +
         '<div class="underlined pad flex wrap" id="level-info">' + infoBits.join("") + "</div>" +
       "</section>" +
+      positionHistoryHtml(demon) +
       recordsTableHtml(demon);
 
     var videoEl = root.querySelector(".js-demon-video");

@@ -12,6 +12,11 @@ window.SITE = {
   description:
     "Nigel's Demonlist ranks the hardest Geometry Dash levels beaten by members of our community.",
 
+  // The day the list went live. Used as the "Added to list" date in each
+  // demon's Position History for the demons that were part of the first batch
+  // (everything added since is dated from its data/changelog.js entry).
+  listCreated: "2026-09-01",
+
   // List tier cutoffs:
   //   position <= mainListSize                     -> Main List
   //   mainListSize < position <= extendedListSize   -> Extended List

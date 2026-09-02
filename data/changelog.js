@@ -15,6 +15,13 @@
 //
 // demonId is optional (links to the demon page when it's present and the demon
 // is still on the list). text is an optional extra clause on any kind.
+//
+// This file also drives each demon page's "Position History" table
+// (DL.positionHistoryFor): the initial order is reconstructed by undoing every
+// add/move/remove logged here, so ALWAYS log a position change as an `add`
+// (with `at`), `move` (with `from` + `to`) or `remove` (with `from`) - an
+// unlogged reorder would desync the history. `text` on a `move` becomes that
+// row's reason verbatim.
 // -----------------------------------------------------------------------------
 
 window.CHANGELOG = [
