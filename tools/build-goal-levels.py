@@ -113,10 +113,22 @@ def palette(img_bytes):
 
 goals_src = io.open(os.path.join(DATA, "goals.js"), encoding="utf-8").read()
 level_ids = []
-for m in re.finditer(r"levelId:\s*(\d+)", goals_src):
-    lid = int(m.group(1))
-    if lid not in level_ids:
-        level_ids.append(lid)
+video_override = {}  # levelId -> YouTube URL from a goal's `video:` field
+_cur = None
+for _line in goals_src.splitlines():
+    m = re.search(r"levelId:\s*(\d+)", _line)
+    if m:
+        _cur = int(m.group(1))
+        if _cur not in level_ids:
+            level_ids.append(_cur)
+    m = re.search(r'video:\s*"([^"]+)"', _line)
+    if m and _cur and _cur not in video_override:
+        video_override[_cur] = m.group(1)
+
+
+def yt_id(url):
+    m = re.search(r"(?:youtu\.be/|[?&]v=|/embed/)([\w-]{6,})", url or "")
+    return m.group(1) if m else None
 
 demons_src = io.open(os.path.join(DATA, "demons.js"), encoding="utf-8").read()
 listed = {int(m.group(1)) for m in re.finditer(r'"levelId":\s*(\d+)', demons_src)}
@@ -133,7 +145,7 @@ for lid in level_ids:
     meta = gl.get("Meta", {}) or {}
     song = meta.get("Song", {}) or {}
 
-    showcase = gl.get("Showcase") or None
+    showcase = yt_id(video_override.get(lid)) or gl.get("Showcase") or None
     rating = round(gl.get("Rating", 0) or 0, 2) or None
     difficulty = meta.get("Difficulty") or (gb.get("difficulty") or "").replace(" Demon", "") or "Extreme"
 

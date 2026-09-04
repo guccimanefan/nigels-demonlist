@@ -17,8 +17,8 @@ window.GOAL_LEVELS = {
     "levelId": 68668045,
     "description": "verified by floofle",
     "requirementPercent": 100,
-    "videoUrl": "https://www.youtube.com/watch?v=k3ebBTBeUTg",
-    "thumbnailUrl": "https://i.ytimg.com/vi/k3ebBTBeUTg/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=Fuxe0O10s-E",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Fuxe0O10s-E/maxresdefault.jpg",
     "gd": {
       "length": "XL",
       "objects": 17568,
@@ -31,12 +31,12 @@ window.GOAL_LEVELS = {
       }
     },
     "palette": {
-      "accent": "#ec521f",
-      "deep": "#3e1a0f",
-      "wash": "#fbf4f2",
-      "mist": "#f3e6e2",
+      "accent": "#3a3adf",
+      "deep": "#0f0f3e",
+      "wash": "#f2f2fb",
+      "mist": "#e2e2f3",
       "onAccent": "#ffffff",
-      "ink": "#47291f"
+      "ink": "#1f1f47"
     }
   },
   "92466083": {
@@ -47,8 +47,8 @@ window.GOAL_LEVELS = {
     "levelId": 92466083,
     "description": "thank god",
     "requirementPercent": 100,
-    "videoUrl": "https://www.youtube.com/watch?v=cFi82t66Ajk",
-    "thumbnailUrl": "https://i.ytimg.com/vi/cFi82t66Ajk/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=wxyYAuMYq5o",
+    "thumbnailUrl": "https://i.ytimg.com/vi/wxyYAuMYq5o/maxresdefault.jpg",
     "gd": {
       "length": "Long",
       "objects": 51608,
@@ -61,12 +61,12 @@ window.GOAL_LEVELS = {
       }
     },
     "palette": {
-      "accent": "#1f1ff9",
-      "deep": "#0f0f3e",
-      "wash": "#f2f2fb",
-      "mist": "#e2e2f3",
+      "accent": "#4d33e6",
+      "deep": "#150f3e",
+      "wash": "#f3f2fb",
+      "mist": "#e4e2f3",
       "onAccent": "#ffffff",
-      "ink": "#1f1f47"
+      "ink": "#241f47"
     }
   },
   "118697760": {

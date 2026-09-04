@@ -16,6 +16,9 @@
 //   note      - freeform status line shown under the progress bar. optional
 //   blurb     - "why this one" - a sentence from the player. optional
 //   attempts  - attempt count. optional
+//   video     - a YouTube URL to use as THIS LEVEL's showcase instead of the
+//               gdladder one (e.g. the player's own recording). If several goals
+//               on one level set it, the first in this file wins. optional
 //   milestones- [{ date: "YYYY-MM-DD", percent: N, note?: "" }] dated log. optional
 //
 // Rendered as a "The Grind" section in the stats-viewer player panel (buttons)
@@ -30,12 +33,14 @@ window.GOALS = [
     levelId: 68668045, // Congregation
     best: 39,
     segments: [[11, 53], [42, 100]],
+    video: "https://youtu.be/Fuxe0O10s-E",
   },
   {
     player: "Nigel",
     levelId: 92466083, // Jupiter My Favourite
     best: 0,
     note: "Haven't started ✌️",
+    video: "https://youtu.be/wxyYAuMYq5o",
   },
 
   // --- Jack ---
