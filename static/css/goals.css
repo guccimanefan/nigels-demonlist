@@ -147,6 +147,47 @@
   color: var(--ink);
 }
 
+.goal-writeup {
+  margin: 14px 2px 6px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--mist);
+  border-radius: 0 4px 4px 0;
+  text-align: left;
+}
+
+.goal-writeup p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.goal-writeup-cite {
+  margin-top: 8px !important;
+  font-size: 0.78rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.goal-ingame {
+  margin: 8px 2px 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--mist);
+  text-align: left;
+  font-size: 0.82rem;
+  opacity: 0.7;
+}
+
+.goal-ingame span {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
 /* --- who's grinding it -------------------------------------------------- */
 
 .goal-grind h3 {

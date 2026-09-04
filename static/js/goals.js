@@ -279,7 +279,21 @@
     var about =
       '<section class="panel fade goal-about">' +
         video +
-        (lv.description ? '<div class="underlined pad"><q>' + DL.escapeHtml(lv.description) + "</q></div>" : "") +
+        (lv.writeup && lv.writeup.text
+          ? '<div class="goal-writeup"><p>' + DL.escapeHtml(lv.writeup.text) + "</p>" +
+            (lv.writeup.source
+              ? '<p class="goal-writeup-cite">via ' +
+                (lv.writeup.url
+                  ? '<a class="link" href="' + DL.escapeHtml(lv.writeup.url) + '" target="_blank" rel="noopener">' +
+                    DL.escapeHtml(lv.writeup.source) + "</a>"
+                  : DL.escapeHtml(lv.writeup.source)) +
+                "</p>"
+              : "") +
+            "</div>"
+          : "") +
+        (lv.description
+          ? '<p class="goal-ingame"><span>In-game description</span><q>' + DL.escapeHtml(lv.description) + "</q></p>"
+          : "") +
         '<div class="underlined pad flex wrap" id="level-info">' + info.join("") + "</div>" +
       "</section>";
 

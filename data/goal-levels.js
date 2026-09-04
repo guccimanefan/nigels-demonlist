@@ -6,6 +6,9 @@
 // itself off the image. A goal level that IS on the Demonlist uses that demon's
 // data/demons.js entry instead and is not listed here. Regenerate after editing
 // data/goals.js:  python site/tools/build-goal-levels.py
+//
+// A hand-written `writeup: { text, source, url }` on any level is EDITORIAL and
+// is carried across regenerations - edit it here directly.
 // -----------------------------------------------------------------------------
 
 window.GOAL_LEVELS = {
@@ -37,6 +40,11 @@ window.GOAL_LEVELS = {
       "mist": "#e2e2f3",
       "onAccent": "#ffffff",
       "ink": "#1f1f47"
+    },
+    "writeup": {
+      "text": "A slow-burn descent into timing hell. Presta wraps you in barely-lit blues and near-invisible passages, lulls you with methodical cube and ball work — then the drop detonates into double- and quadruple-speed chaos in searing orange. No ship section the whole way through, an Epic rating earned under the old object cap, and the birthplace of the internet's favourite \"jumpscare\" edit. Peaked around #35 on the Demonlist before sliding to Legacy.",
+      "source": "Geometry Dash Wiki",
+      "url": "https://geometrydash.wiki.gg/wiki/Congregation"
     }
   },
   "92466083": {
@@ -67,6 +75,11 @@ window.GOAL_LEVELS = {
       "mist": "#e4e2f3",
       "onAccent": "#ffffff",
       "ink": "#241f47"
+    },
+    "writeup": {
+      "text": "Akunakunn's neon-blue-and-gold odyssey, run to jeffusan's \"Tokyo Nights.\" A dense 2.1 Extreme built on tight straight-fly, sharp waves and unforgiving transitions crammed into 1:41. Leslie put it down in 2023 and called it the hardest thing she'd ever verified — the in-game description still roasts a player named luigidb about it. Sits around #234 on the Demonlist.",
+      "source": "Pointercrate Demonlist",
+      "url": "https://pointercrate.com/demonlist/234/"
     }
   },
   "118697760": {
@@ -97,6 +110,11 @@ window.GOAL_LEVELS = {
       "mist": "#f3f3e2",
       "onAccent": "#111111",
       "ink": "#47471f"
+    },
+    "writeup": {
+      "text": "Four and a half minutes. Wave and mini-wave, and nothing else. BombCraft2010's endurance monster is a marathon of narrow corridors and pixel-thin gaps where a single twitch ends the run — the kind of Extreme people keep insisting should be an Insane, right up until they try to hold it together for the full length. Wave mains only.",
+      "source": "GD Demon Ladder",
+      "url": "https://gdladder.com/level/118697760"
     }
   },
   "20761188": {
@@ -127,6 +145,11 @@ window.GOAL_LEVELS = {
       "mist": "#f3e8e2",
       "onAccent": "#ffffff",
       "ink": "#472c1f"
+    },
+    "writeup": {
+      "text": "Book two of nikrodox's Dedication saga — after Dedication, before Renevant. Rainbow decoration and pulsing crosses swarm the screen while you thread straight-fly, tight waves and fast portal timings to TheLivingTombstone's \"I Got No Time.\" Nerfed hard from its original cut (which supposedly out-classed Yatagarasu), then re-verified by EndLevel. A 2016 legend that still bites.",
+      "source": "Geometry Dash Wiki",
+      "url": "https://geometrydash.wiki.gg/wiki/Allegiance"
     }
   },
   "8147005": {
@@ -157,6 +180,11 @@ window.GOAL_LEVELS = {
       "mist": "#eef3e2",
       "onAccent": "#111111",
       "ink": "#3c471f"
+    },
+    "writeup": {
+      "text": "The green one. Spectra's lone classic — a Nine Circles level that started life as \"Lime Circles,\" bookended by sunset skylines full of cranes and towers. An easy cube into a gap-riddled ship, and then the wave hits: spam, mini and dual patterns that demand machine-gun tapping and zero hesitation. Twenty-seven updates deep; it was #19 on the Demonlist back in 2017.",
+      "source": "Geometry Dash Wiki — Nine Circles Levels",
+      "url": "https://geometrydash.wiki.gg/wiki/Nine_Circles_Levels"
     }
   },
   "146399247": {
@@ -188,6 +216,11 @@ window.GOAL_LEVELS = {
       "mist": "#f3f3e2",
       "onAccent": "#ffffff",
       "ink": "#47471f"
+    },
+    "writeup": {
+      "text": "Devilmine handed the palette to a random number generator — three colours, hue shifts allowed — and built an Extreme Demon around whatever came out. Short, sharp, and set to Waterflame's \"-Killstealer-,\" it landed in August 2026 wearing the crown of easiest Extreme Demon in the game. Still an Extreme.",
+      "source": "GD Demon Ladder",
+      "url": "https://gdladder.com/level/146399247"
     }
   },
   "113220284": {
@@ -218,6 +251,11 @@ window.GOAL_LEVELS = {
       "mist": "#f3e2e2",
       "onAccent": "#ffffff",
       "ink": "#471f1f"
+    },
+    "writeup": {
+      "text": "Dolabill's would-be Top 5 — showcased as an upcoming monster, then nerfed toward Tartarus tier and still landing near #80 on the Demonlist. Fifty-two thousand objects of dark, churning red set to Korsak's \"green eyes.\" Dolabill's own 100% made him the best non-American player in the game, eleven years in. This is the hard one on the board.",
+      "source": "Pointercrate Demonlist",
+      "url": "https://pointercrate.com/demonlist/79/"
     }
   }
 };

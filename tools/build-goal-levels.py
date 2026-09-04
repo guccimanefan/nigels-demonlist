@@ -133,6 +133,15 @@ def yt_id(url):
 demons_src = io.open(os.path.join(DATA, "demons.js"), encoding="utf-8").read()
 listed = {int(m.group(1)) for m in re.finditer(r'"levelId":\s*(\d+)', demons_src)}
 
+# carry hand-written editorial fields over from the existing file
+KEEP = ("writeup",)
+prev = {}
+try:
+    ps = io.open(os.path.join(DATA, "goal-levels.js"), encoding="utf-8").read()
+    prev = json.loads(re.search(r"window\.GOAL_LEVELS\s*=\s*(\{.*\});\s*$", ps, re.S).group(1))
+except Exception:
+    pass
+
 out = {}
 for lid in level_ids:
     if lid in listed:
@@ -190,6 +199,10 @@ for lid in level_ids:
             except Exception as e:
                 print("  palette fail", lid, e)
 
+    for k in KEEP:
+        if k in prev.get(str(lid), {}):
+            entry[k] = prev[str(lid)][k]
+
     out[str(lid)] = entry
     print(f"  {lid}  {entry['name']:<26} r{rating}  {difficulty:<8} accent={entry.get('palette', {}).get('accent', '?')}")
 
@@ -202,6 +215,9 @@ header = (
     "// itself off the image. A goal level that IS on the Demonlist uses that demon's\n"
     "// data/demons.js entry instead and is not listed here. Regenerate after editing\n"
     "// data/goals.js:  python site/tools/build-goal-levels.py\n"
+    "//\n"
+    "// A hand-written `writeup: { text, source, url }` on any level is EDITORIAL and\n"
+    "// is carried across regenerations - edit it here directly.\n"
     "// -----------------------------------------------------------------------------\n\n"
 )
 io.open(os.path.join(DATA, "goal-levels.js"), "w", encoding="utf-8", newline="\n").write(
