@@ -80,4 +80,12 @@ window.GOALS = [
     segments: [[31, 57], [58, 100]],
     note: "Has it in two halves - 31–57% and 58–100%.",
   },
+
+  // --- ufplayer ---
+  {
+    player: "ufplayer",
+    levelId: 86084399, // LIMBO
+    best: null,
+    segments: [[51, 78], [68, 100]],
+  },
 ];

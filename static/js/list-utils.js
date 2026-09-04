@@ -330,6 +330,7 @@ DL.embedVideo = function (video) {
 // fallback the map isn't needed for.
 DL.COUNTRY_NAMES = {
   US: "United States",
+  MX: "Mexico",
 };
 DL.SUBDIVISION_NAMES = {
   "US-IL": "Illinois",

@@ -257,5 +257,40 @@ window.GOAL_LEVELS = {
       "source": "Pointercrate Demonlist",
       "url": "https://pointercrate.com/demonlist/79/"
     }
+  },
+  "86084399": {
+    "name": "LIMBO",
+    "publisher": "MindCap",
+    "difficulty": "Extreme",
+    "rating": 36.94,
+    "levelId": 86084399,
+    "description": "                                            FOCUS",
+    "requirementPercent": 100,
+    "videoUrl": "https://www.youtube.com/watch?v=MqXTDKXzfQw",
+    "thumbnailUrl": "https://i.ytimg.com/vi/MqXTDKXzfQw/maxresdefault.jpg",
+    "gd": {
+      "length": "XL",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "76743",
+        "name": "NH22 - Isolation",
+        "artist": "NightHawk22"
+      }
+    },
+    "palette": {
+      "accent": "#4b1ff9",
+      "deep": "#180f3e",
+      "wash": "#f4f2fb",
+      "mist": "#e5e2f3",
+      "onAccent": "#ffffff",
+      "ink": "#271f47"
+    },
+    "writeup": {
+      "text": "A 2.1 memory monster hosted by MindCap, verified by BGram after 109,490 attempts. Built in 1.9 style with an indigo, dark-blue and red palette, it asks you to memorise orb sequences and invisible blocks with nothing to hide behind — and then at 87% drops you into a randomised key puzzle with 128 possible combinations. Peaked at #7 on the Demonlist and lives near the top of every \"greatest levels of all time\" list.",
+      "source": "Geometry Dash Wiki",
+      "url": "https://geometrydash.wiki.gg/wiki/LIMBO"
+    }
   }
 };

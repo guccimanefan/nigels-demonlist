@@ -26,6 +26,21 @@
 
 window.CHANGELOG = [
   {
+    date: "2026-09-04",
+    items: [
+      // ordered high position number -> low so the position-history replay
+      // (which reverses items within an entry) inserts them low -> high
+      { kind: "add", demon: "tower descent", demonId: 92742742, at: 24, text: "ufplayer's clear - a pocke Hard Demon" },
+      { kind: "add", demon: "CraZy II", demonId: 47620786, at: 16, text: "ufplayer's clear - DavJT's Insane Demon" },
+      { kind: "add", demon: "Fool Moon Paranoid", demonId: 87932531, at: 13, text: "ufplayer's clear - an unne Insane Demon" },
+      { kind: "add", demon: "Worse Trip", demonId: 78248443, at: 2, text: "ufplayer's clear - Loltad's Extreme Demon, straight in at #2" },
+      {
+        kind: "note",
+        text: "New member: ufplayer, from Mexico. Trying to beat LIMBO.",
+      },
+    ],
+  },
+  {
     date: "2026-09-01",
     items: [
       {
