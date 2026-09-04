@@ -380,6 +380,15 @@
             .map(function (r) { return DL.formatDemonLink(r.demon) + " (" + r.progress + "%)"; })
             .join(" - ")
         : "None";
+
+      // "The Grind" - levels this player is trying to beat (data/goals.js)
+      var grindHtml = DL.renderGrindChips ? DL.renderGrindChips(p.name) : "";
+      if (grindHtml) {
+        show("grind-row");
+        el("grind").innerHTML = grindHtml;
+      } else {
+        hide("grind-row");
+      }
     }
 
     // --- nation panel --------------------------------------------------
@@ -414,6 +423,7 @@
 
       welcomeEl.style.display = "none";
       contentEl.style.display = "block";
+      hide("grind-row"); // "The Grind" is per-player only
       if (push !== false) {
         history.replaceState(null, "", "statsviewer.html?nation=" + encodeURIComponent(code));
       }
@@ -495,6 +505,7 @@
       el("players-row").style.display = mode === "nations" ? "" : "none";
       el("unbeaten-row").style.display = mode === "nations" ? "" : "none";
       if (el("subdivisions-row")) el("subdivisions-row").style.display = mode === "nations" ? "" : "none";
+      hide("grind-row"); // repopulated when a player is picked
 
       // start the new mode from a clean slate (keep only the continent view)
       filter.nation = "";
@@ -526,6 +537,7 @@
     el("players-row").style.display = "none";
     el("unbeaten-row").style.display = "none";
     if (el("subdivisions-row")) el("subdivisions-row").style.display = "none";
+    hide("grind-row");
     // no Legacy demons on the list -> drop the empty "Legacy List" tier row
     if (el("legacy-beaten-row") && !DL.sortedDemons().some(function (d) { return DL.tierOf(d.position) === "legacy"; })) {
       el("legacy-beaten-row").style.display = "none";
