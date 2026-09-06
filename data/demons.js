@@ -389,7 +389,7 @@ window.DEMONS = [
     ],
     "verifier": "ufplayer",
     "videoUrl": "https://www.youtube.com/watch?v=aMjvBXqTK-w",
-    "thumbnailUrl": "https://i.ytimg.com/vi/aMjvBXqTK-w/maxresdefault.jpg",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aMjvBXqTK-w/sddefault.jpg",
     "levelId": 59948178,
     "description": "My one man megacollab. Not an impeccable level, but it is most definitely my best so far! First CP, love you all <3 Pass is 420420",
     "requirementPercent": 100,

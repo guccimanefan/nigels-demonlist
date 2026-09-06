@@ -35,17 +35,19 @@ def curl_json(url):
 
 
 def fetch_thumb(video_id):
-    for q in ("maxresdefault", "hqdefault"):
+    """Return (best-available thumbnail URL, its bytes). YouTube only makes a
+    /maxresdefault for HD uploads; fall back to /sddefault then /hqdefault."""
+    for q in ("maxresdefault", "sddefault", "hqdefault"):
         try:
-            req = urllib.request.Request(
-                f"https://i.ytimg.com/vi/{video_id}/{q}.jpg", headers={"User-Agent": "Mozilla/5.0"}
-            )
-            data = urllib.request.urlopen(req, timeout=25).read()
+            url = f"https://i.ytimg.com/vi/{video_id}/{q}.jpg"
+            data = urllib.request.urlopen(
+                urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=25
+            ).read()
             if len(data) > 2000:
-                return data
+                return url, data
         except Exception:
             continue
-    return None
+    return None, None
 
 
 def _hex(r, g, b):
@@ -169,7 +171,6 @@ for lid in level_ids:
     }
     if showcase:
         entry["videoUrl"] = f"https://www.youtube.com/watch?v={showcase}"
-        entry["thumbnailUrl"] = f"https://i.ytimg.com/vi/{showcase}/maxresdefault.jpg"
 
     gd = {}
     ln = gb.get("length") or LEN_CODE.get(meta.get("Length"))
@@ -192,7 +193,8 @@ for lid in level_ids:
     entry["gd"] = gd
 
     if showcase:
-        tb = fetch_thumb(showcase)
+        turl, tb = fetch_thumb(showcase)
+        entry["thumbnailUrl"] = turl or f"https://i.ytimg.com/vi/{showcase}/maxresdefault.jpg"
         if tb:
             try:
                 entry["palette"] = palette(tb)

@@ -21,7 +21,6 @@ window.GOAL_LEVELS = {
     "description": "verified by floofle",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=Fuxe0O10s-E",
-    "thumbnailUrl": "https://i.ytimg.com/vi/Fuxe0O10s-E/maxresdefault.jpg",
     "gd": {
       "length": "XL",
       "objects": 17568,
@@ -33,6 +32,7 @@ window.GOAL_LEVELS = {
         "artist": "Koraii"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/Fuxe0O10s-E/maxresdefault.jpg",
     "palette": {
       "accent": "#3a3adf",
       "deep": "#0f0f3e",
@@ -56,7 +56,6 @@ window.GOAL_LEVELS = {
     "description": "thank god",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=wxyYAuMYq5o",
-    "thumbnailUrl": "https://i.ytimg.com/vi/wxyYAuMYq5o/maxresdefault.jpg",
     "gd": {
       "length": "Long",
       "objects": 51608,
@@ -68,6 +67,7 @@ window.GOAL_LEVELS = {
         "artist": "jeffusan"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/wxyYAuMYq5o/maxresdefault.jpg",
     "palette": {
       "accent": "#4d33e6",
       "deep": "#150f3e",
@@ -91,7 +91,6 @@ window.GOAL_LEVELS = {
     "description": "Wave only extreme demon, playtested by TheFlyingJet, verified by MiniShoey. Enjoy! :3 #AdvyOut",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=-G5G7Bl4b9s",
-    "thumbnailUrl": "https://i.ytimg.com/vi/-G5G7Bl4b9s/maxresdefault.jpg",
     "gd": {
       "length": "XL",
       "objects": 46039,
@@ -103,6 +102,7 @@ window.GOAL_LEVELS = {
         "artist": "cysmix"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/-G5G7Bl4b9s/maxresdefault.jpg",
     "palette": {
       "accent": "#a3a30a",
       "deep": "#3e3e0f",
@@ -126,7 +126,6 @@ window.GOAL_LEVELS = {
     "description": "Reverified by EndLevel, Fixed the 2.1 Bug :)",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=lHf6buYpbXU",
-    "thumbnailUrl": "https://i.ytimg.com/vi/lHf6buYpbXU/maxresdefault.jpg",
     "gd": {
       "length": "Long",
       "objects": 62018,
@@ -138,6 +137,7 @@ window.GOAL_LEVELS = {
         "artist": "TheLivingTombstone"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/lHf6buYpbXU/maxresdefault.jpg",
     "palette": {
       "accent": "#eb5306",
       "deep": "#3e1e0f",
@@ -161,7 +161,6 @@ window.GOAL_LEVELS = {
     "description": "Another generic NC level",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=gyRjfhKYQeU",
-    "thumbnailUrl": "https://i.ytimg.com/vi/gyRjfhKYQeU/maxresdefault.jpg",
     "gd": {
       "length": "Long",
       "objects": 16603,
@@ -173,6 +172,7 @@ window.GOAL_LEVELS = {
         "artist": "Rukkus"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/gyRjfhKYQeU/maxresdefault.jpg",
     "palette": {
       "accent": "#7ca904",
       "deep": "#313e0f",
@@ -196,7 +196,6 @@ window.GOAL_LEVELS = {
     "description": "Level made with 3 random generated colors (i allowed hue shifts cuz holy cooked)",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=-ge89eZ9_5M",
-    "thumbnailUrl": "https://i.ytimg.com/vi/-ge89eZ9_5M/maxresdefault.jpg",
     "gd": {
       "length": "Medium",
       "objects": 8251,
@@ -209,6 +208,7 @@ window.GOAL_LEVELS = {
         "link": "http://audio.ngfiles.com/433000/433359_Killstealer.mp3"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/-ge89eZ9_5M/maxresdefault.jpg",
     "palette": {
       "accent": "#8b8b28",
       "deep": "#3b3b11",
@@ -232,7 +232,6 @@ window.GOAL_LEVELS = {
     "description": "All the elements pull us apart. But I'm holding on. Know your hands by heart. As I'm reaching out into the dark.",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=S_pBi3nlEDo",
-    "thumbnailUrl": "https://i.ytimg.com/vi/S_pBi3nlEDo/maxresdefault.jpg",
     "gd": {
       "length": "Long",
       "objects": 52644,
@@ -244,6 +243,7 @@ window.GOAL_LEVELS = {
         "artist": "Korsak"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/S_pBi3nlEDo/maxresdefault.jpg",
     "palette": {
       "accent": "#cb4d4d",
       "deep": "#3b1111",
@@ -267,7 +267,6 @@ window.GOAL_LEVELS = {
     "description": "                                            FOCUS",
     "requirementPercent": 100,
     "videoUrl": "https://www.youtube.com/watch?v=MqXTDKXzfQw",
-    "thumbnailUrl": "https://i.ytimg.com/vi/MqXTDKXzfQw/maxresdefault.jpg",
     "gd": {
       "length": "XL",
       "objects": 65535,
@@ -279,6 +278,7 @@ window.GOAL_LEVELS = {
         "artist": "NightHawk22"
       }
     },
+    "thumbnailUrl": "https://i.ytimg.com/vi/MqXTDKXzfQw/maxresdefault.jpg",
     "palette": {
       "accent": "#4b1ff9",
       "deep": "#180f3e",

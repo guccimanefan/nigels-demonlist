@@ -183,6 +183,46 @@ DL.tierLabel = function (tier) {
   return { main: "Main List", extended: "Extended List", legacy: "Legacy List" }[tier];
 };
 
+// YouTube only generates /maxresdefault.jpg for videos uploaded in HD - for the
+// rest it 404s (or serves a 120x90 grey placeholder), leaving a blank thumbnail
+// (e.g. Bad Trip's showcase). This walks every element whose inline style points
+// a background at a ytimg maxresdefault and, if that image doesn't really load,
+// silently swaps in /sddefault.jpg (always present, 4:3 - `background-size:cover`
+// crops the letterboxing). Runs once on DOM ready; safe to call again.
+DL.fixYouTubeThumbs = function (root) {
+  var scope = root || document;
+  var els = scope.querySelectorAll('[style*="ytimg.com/vi/"][style*="maxresdefault"]');
+  Array.prototype.forEach.call(els, function (el) {
+    var m = /url\((["']?)(https:\/\/i\.ytimg\.com\/vi\/[\w-]+)\/maxresdefault\.jpg\1\)/.exec(
+      el.getAttribute("style") || ""
+    );
+    if (!m) return;
+    var base = m[2];
+    var probe = new Image();
+    probe.onerror = function () {
+      el.style.backgroundImage = "url(" + base + "/sddefault.jpg)";
+    };
+    probe.onload = function () {
+      // the "no maxres" grey placeholder is 120x90
+      if (probe.naturalWidth && probe.naturalWidth <= 121) {
+        el.style.backgroundImage = "url(" + base + "/sddefault.jpg)";
+      }
+    };
+    probe.src = base + "/maxresdefault.jpg";
+  });
+};
+
+if (typeof document !== "undefined") {
+  var _fix = function () {
+    DL.fixYouTubeThumbs();
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", _fix);
+  } else {
+    _fix();
+  }
+}
+
 // Rough gdladder-rating estimate per difficulty tier (from this list's medians)
 // - only a fallback for a demon added without a numeric `rating`.
 DL.RATING_BY_DIFFICULTY = {
