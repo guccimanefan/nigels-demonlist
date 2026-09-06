@@ -26,6 +26,20 @@
 
 window.CHANGELOG = [
   {
+    date: "2026-09-06",
+    items: [
+      // high position -> low so the position-history replay inserts low -> high
+      { kind: "add", demon: "Lit Fuse", demonId: 15122517, at: 16, text: "ufplayer's clear - KrmaL's first solo, an Insane Demon" },
+      { kind: "add", demon: "Bad Trip", demonId: 59948178, at: 10, text: "ufplayer's clear - Loltad's one-man megacollab" },
+      { kind: "add", demon: "HyperSonic", demonId: 30219145, at: 7, text: "ufplayer's clear - the ViPriN Sonic megacollab" },
+      { kind: "add", demon: "Steel Terrors", demonId: 119653522, at: 6, text: "ufplayer's clear - a DreamZoneGD Extreme Demon" },
+      {
+        kind: "note",
+        text: "ufplayer also cleared Supersonic (already #14). They move to #2 on the leaderboard, past Juice.",
+      },
+    ],
+  },
+  {
     date: "2026-09-04",
     items: [
       // ordered high position number -> low so the position-history replay

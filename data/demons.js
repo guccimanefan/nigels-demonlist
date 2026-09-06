@@ -227,8 +227,83 @@ window.DEMONS = [
     }
   },
   {
-    "id": 114933189,
+    "id": 119653522,
     "position": 6,
+    "name": "Steel Terrors",
+    "difficulty": "Extreme",
+    "rating": 21.58,
+    "publisher": "DreamZoneGD",
+    "creators": [
+      "DreamZoneGD"
+    ],
+    "verifier": "ufplayer",
+    "videoUrl": "https://www.youtube.com/watch?v=8hi2QZBEgUQ",
+    "thumbnailUrl": "https://i.ytimg.com/vi/8hi2QZBEgUQ/maxresdefault.jpg",
+    "levelId": 119653522,
+    "description": "You cant crush steel, but steel can crush YOU",
+    "requirementPercent": 100,
+    "records": [
+      {
+        "player": "ufplayer",
+        "progress": 100,
+        "nationality": "MX",
+        "subdivision": null
+      }
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "580470",
+        "name": "---Steel Terror---",
+        "artist": "Acid-Notation",
+        "link": "https://geometrydashcontent.b-cdn.net/songs/580470.mp3"
+      },
+      "songOfficial": false
+    }
+  },
+  {
+    "id": 30219145,
+    "position": 7,
+    "name": "HyperSonic",
+    "difficulty": "Extreme",
+    "rating": 21.0,
+    "publisher": "ViPriN",
+    "creators": [
+      "ViPriN"
+    ],
+    "verifier": "ufplayer",
+    "videoUrl": "https://www.youtube.com/watch?v=yFwPswAfvqw",
+    "thumbnailUrl": "https://i.ytimg.com/vi/yFwPswAfvqw/maxresdefault.jpg",
+    "levelId": 30219145,
+    "description": "Megacollab by Dudex, Serponge, Manix648, Vlacc, Rustam, nasgubb, ZenthicAlpha, me, PanMan, Evasium, Etzer & Terron. Verified by Combined",
+    "requirementPercent": 100,
+    "records": [
+      {
+        "player": "ufplayer",
+        "progress": 100,
+        "nationality": "MX",
+        "subdivision": null
+      }
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 65535,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Extreme Demon",
+      "song": {
+        "id": "684300",
+        "name": "ColBreakz - 10000",
+        "artist": "ColBreakz"
+      },
+      "songOfficial": false
+    }
+  },
+  {
+    "id": 114933189,
+    "position": 8,
     "name": "Through The Decay",
     "difficulty": "Extreme",
     "rating": 20.08,
@@ -266,7 +341,7 @@ window.DEMONS = [
   },
   {
     "id": 61137742,
-    "position": 7,
+    "position": 9,
     "name": "Leyak",
     "difficulty": "Insane",
     "rating": 18.14,
@@ -303,8 +378,45 @@ window.DEMONS = [
     }
   },
   {
+    "id": 59948178,
+    "position": 10,
+    "name": "Bad Trip",
+    "difficulty": "Insane",
+    "rating": 17.91,
+    "publisher": "Loltad",
+    "creators": [
+      "Loltad"
+    ],
+    "verifier": "ufplayer",
+    "videoUrl": "https://www.youtube.com/watch?v=aMjvBXqTK-w",
+    "thumbnailUrl": "https://i.ytimg.com/vi/aMjvBXqTK-w/maxresdefault.jpg",
+    "levelId": 59948178,
+    "description": "My one man megacollab. Not an impeccable level, but it is most definitely my best so far! First CP, love you all <3 Pass is 420420",
+    "requirementPercent": 100,
+    "records": [
+      {
+        "player": "ufplayer",
+        "progress": 100,
+        "nationality": "MX",
+        "subdivision": null
+      }
+    ],
+    "gd": {
+      "length": "Long",
+      "objects": 46843,
+      "gameVersion": "2.1",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "905108",
+        "name": "Creo - Crazy",
+        "artist": "CreoMusic"
+      },
+      "songOfficial": false
+    }
+  },
+  {
     "id": 37259527,
-    "position": 8,
+    "position": 11,
     "name": "BuTiTi II",
     "difficulty": "Insane",
     "rating": 17.79,
@@ -342,7 +454,7 @@ window.DEMONS = [
   },
   {
     "id": 126213470,
-    "position": 9,
+    "position": 12,
     "name": "Nilscapes",
     "difficulty": "Insane",
     "rating": 17.02,
@@ -380,7 +492,7 @@ window.DEMONS = [
   },
   {
     "id": 32885972,
-    "position": 10,
+    "position": 13,
     "name": "Dark Travel",
     "difficulty": "Insane",
     "rating": 16.94,
@@ -418,7 +530,7 @@ window.DEMONS = [
   },
   {
     "id": 4706930,
-    "position": 11,
+    "position": 14,
     "name": "Supersonic",
     "difficulty": "Insane",
     "rating": 16.88,
@@ -438,6 +550,12 @@ window.DEMONS = [
         "progress": 100,
         "nationality": "US",
         "subdivision": "IL"
+      },
+      {
+        "player": "ufplayer",
+        "progress": 100,
+        "nationality": "MX",
+        "subdivision": null
       }
     ],
     "gd": {
@@ -455,7 +573,7 @@ window.DEMONS = [
   },
   {
     "id": 59858021,
-    "position": 12,
+    "position": 15,
     "name": "Dream Travel",
     "difficulty": "Insane",
     "rating": 16.79,
@@ -492,8 +610,45 @@ window.DEMONS = [
     }
   },
   {
+    "id": 15122517,
+    "position": 16,
+    "name": "Lit Fuse",
+    "difficulty": "Insane",
+    "rating": 16.67,
+    "publisher": "KrmaL",
+    "creators": [
+      "KrmaL"
+    ],
+    "verifier": "ufplayer",
+    "videoUrl": "https://www.youtube.com/watch?v=e8f1SGxkAk0",
+    "thumbnailUrl": "https://i.ytimg.com/vi/e8f1SGxkAk0/maxresdefault.jpg",
+    "levelId": 15122517,
+    "description": "My first completely solo, actually-intended-to-be-decent level. Enjoy :^) Update 3: Fixed bugs with higher refresh rates",
+    "requirementPercent": 100,
+    "records": [
+      {
+        "player": "ufplayer",
+        "progress": 100,
+        "nationality": "MX",
+        "subdivision": null
+      }
+    ],
+    "gd": {
+      "length": "XL",
+      "objects": 28484,
+      "gameVersion": "2.2",
+      "inGameDifficulty": "Insane Demon",
+      "song": {
+        "id": "657081",
+        "name": "Lit Fuse",
+        "artist": "Cacola"
+      },
+      "songOfficial": false
+    }
+  },
+  {
     "id": 87932531,
-    "position": 13,
+    "position": 17,
     "name": "Fool Moon Paranoid",
     "difficulty": "Insane",
     "rating": 16.06,
@@ -530,7 +685,7 @@ window.DEMONS = [
   },
   {
     "id": 7054561,
-    "position": 14,
+    "position": 18,
     "name": "Poltergeist",
     "difficulty": "Insane",
     "rating": 15.94,
@@ -568,7 +723,7 @@ window.DEMONS = [
   },
   {
     "id": 56568010,
-    "position": 15,
+    "position": 19,
     "name": "Magma Bound",
     "difficulty": "Insane",
     "rating": 15.77,
@@ -612,7 +767,7 @@ window.DEMONS = [
   },
   {
     "id": 47620786,
-    "position": 16,
+    "position": 20,
     "name": "CraZy II",
     "difficulty": "Insane",
     "rating": 15.3,
@@ -650,7 +805,7 @@ window.DEMONS = [
   },
   {
     "id": 4545425,
-    "position": 17,
+    "position": 21,
     "name": "Stalemate",
     "difficulty": "Insane",
     "rating": 15.19,
@@ -687,7 +842,7 @@ window.DEMONS = [
   },
   {
     "id": 43945511,
-    "position": 18,
+    "position": 22,
     "name": "Game Time",
     "difficulty": "Insane",
     "rating": 15.06,
@@ -725,7 +880,7 @@ window.DEMONS = [
   },
   {
     "id": 11402965,
-    "position": 19,
+    "position": 23,
     "name": "Forest Temple",
     "difficulty": "Hard",
     "rating": 13.96,
@@ -762,7 +917,7 @@ window.DEMONS = [
   },
   {
     "id": 44062068,
-    "position": 20,
+    "position": 24,
     "name": "Future Funk",
     "difficulty": "Hard",
     "rating": 12.96,
@@ -806,7 +961,7 @@ window.DEMONS = [
   },
   {
     "id": 4284013,
-    "position": 21,
+    "position": 25,
     "name": "Nine Circles",
     "difficulty": "Hard",
     "rating": 11.15,
@@ -855,7 +1010,7 @@ window.DEMONS = [
   },
   {
     "id": 104968496,
-    "position": 22,
+    "position": 26,
     "name": "Tidal Line",
     "difficulty": "Hard",
     "rating": 10.23,
@@ -893,7 +1048,7 @@ window.DEMONS = [
   },
   {
     "id": 102343052,
-    "position": 23,
+    "position": 27,
     "name": "Space Invaders",
     "difficulty": "Hard",
     "rating": 10.21,
@@ -931,7 +1086,7 @@ window.DEMONS = [
   },
   {
     "id": 92742742,
-    "position": 24,
+    "position": 28,
     "name": "tower descent",
     "difficulty": "Hard",
     "rating": 10.15,
@@ -969,7 +1124,7 @@ window.DEMONS = [
   },
   {
     "id": 96096712,
-    "position": 25,
+    "position": 29,
     "name": "Entropic Dreams",
     "difficulty": "Hard",
     "rating": 9.94,
@@ -1007,7 +1162,7 @@ window.DEMONS = [
   },
   {
     "id": 47611766,
-    "position": 26,
+    "position": 30,
     "name": "Biru",
     "difficulty": "Medium",
     "rating": 9.86,
@@ -1045,7 +1200,7 @@ window.DEMONS = [
   },
   {
     "id": 25706351,
-    "position": 27,
+    "position": 31,
     "name": "HeLL",
     "difficulty": "Medium",
     "rating": 8.05,
@@ -1082,7 +1237,7 @@ window.DEMONS = [
   },
   {
     "id": 69087510,
-    "position": 28,
+    "position": 32,
     "name": "evolutionary theory",
     "difficulty": "Medium",
     "rating": 7.84,
@@ -1120,7 +1275,7 @@ window.DEMONS = [
   },
   {
     "id": 40202837,
-    "position": 29,
+    "position": 33,
     "name": "Rising Down",
     "difficulty": "Medium",
     "rating": 6.94,
@@ -1158,7 +1313,7 @@ window.DEMONS = [
   },
   {
     "id": 118509879,
-    "position": 30,
+    "position": 34,
     "name": "Skeletal Shenanigans",
     "difficulty": "Medium",
     "rating": 6.66,
@@ -1202,7 +1357,7 @@ window.DEMONS = [
   },
   {
     "id": 61417747,
-    "position": 31,
+    "position": 35,
     "name": "potal",
     "difficulty": "Medium",
     "rating": 6.38,
@@ -1239,7 +1394,7 @@ window.DEMONS = [
   },
   {
     "id": 17924880,
-    "position": 32,
+    "position": 36,
     "name": "Lonely travel",
     "difficulty": "Medium",
     "rating": 6.23,
@@ -1276,7 +1431,7 @@ window.DEMONS = [
   },
   {
     "id": 10972106,
-    "position": 33,
+    "position": 37,
     "name": "Solar Circles",
     "difficulty": "Medium",
     "rating": 5.92,
@@ -1313,7 +1468,7 @@ window.DEMONS = [
   },
   {
     "id": 34085027,
-    "position": 34,
+    "position": 38,
     "name": "B",
     "difficulty": "Medium",
     "rating": 5.81,
@@ -1351,7 +1506,7 @@ window.DEMONS = [
   },
   {
     "id": 95683886,
-    "position": 35,
+    "position": 39,
     "name": "penguin industries",
     "difficulty": "Medium",
     "rating": 5.31,
@@ -1389,7 +1544,7 @@ window.DEMONS = [
   },
   {
     "id": 220369,
-    "position": 36,
+    "position": 40,
     "name": "Theory of Jumping",
     "difficulty": "Medium",
     "rating": 4.77,
@@ -1425,7 +1580,7 @@ window.DEMONS = [
   },
   {
     "id": 3,
-    "position": 37,
+    "position": 41,
     "name": "Deadlocked",
     "difficulty": "Official",
     "rating": 4.68,
@@ -1462,7 +1617,7 @@ window.DEMONS = [
   },
   {
     "id": 2997354,
-    "position": 38,
+    "position": 42,
     "name": "DeCode",
     "difficulty": "Easy",
     "rating": 4.11,
@@ -1505,7 +1660,7 @@ window.DEMONS = [
   },
   {
     "id": 8660411,
-    "position": 39,
+    "position": 43,
     "name": "Death Moon",
     "difficulty": "Easy",
     "rating": 3.81,
@@ -1542,7 +1697,7 @@ window.DEMONS = [
   },
   {
     "id": 63277477,
-    "position": 40,
+    "position": 44,
     "name": "well being spot",
     "difficulty": "Easy",
     "rating": 3.64,
@@ -1580,7 +1735,7 @@ window.DEMONS = [
   },
   {
     "id": 111286661,
-    "position": 41,
+    "position": 45,
     "name": "MUNDUS SANGUINANS",
     "difficulty": "Easy",
     "rating": 3.23,
@@ -1618,7 +1773,7 @@ window.DEMONS = [
   },
   {
     "id": 7116121,
-    "position": 42,
+    "position": 46,
     "name": "Problematic",
     "difficulty": "Easy",
     "rating": 3.12,
@@ -1655,7 +1810,7 @@ window.DEMONS = [
   },
   {
     "id": 90475473,
-    "position": 43,
+    "position": 47,
     "name": "Change of Scene",
     "difficulty": "Easy",
     "rating": 3.04,
@@ -1693,7 +1848,7 @@ window.DEMONS = [
   },
   {
     "id": 2,
-    "position": 44,
+    "position": 48,
     "name": "Theory of Everything 2",
     "difficulty": "Official",
     "rating": 3.04,
@@ -1724,7 +1879,7 @@ window.DEMONS = [
   },
   {
     "id": 77292103,
-    "position": 45,
+    "position": 49,
     "name": "White Space",
     "difficulty": "Easy",
     "rating": 2.89,
@@ -1762,7 +1917,7 @@ window.DEMONS = [
   },
   {
     "id": 14850167,
-    "position": 46,
+    "position": 50,
     "name": "Horizon",
     "difficulty": "Easy",
     "rating": 2.89,
@@ -1799,7 +1954,7 @@ window.DEMONS = [
   },
   {
     "id": 14000484,
-    "position": 47,
+    "position": 51,
     "name": "Retro Circles",
     "difficulty": "Easy",
     "rating": 2.89,
@@ -1837,7 +1992,7 @@ window.DEMONS = [
   },
   {
     "id": 9864147,
-    "position": 48,
+    "position": 52,
     "name": "Space Circles",
     "difficulty": "Easy",
     "rating": 2.88,
@@ -1874,7 +2029,7 @@ window.DEMONS = [
   },
   {
     "id": 1,
-    "position": 49,
+    "position": 53,
     "name": "Clubstep",
     "difficulty": "Official",
     "rating": 2.83,
@@ -1905,7 +2060,7 @@ window.DEMONS = [
   },
   {
     "id": 184880,
-    "position": 50,
+    "position": 54,
     "name": "Ruined Planet",
     "difficulty": "Easy",
     "rating": 2.77,
@@ -1942,7 +2097,7 @@ window.DEMONS = [
   },
   {
     "id": 82804029,
-    "position": 51,
+    "position": 55,
     "name": "Endless Descent",
     "difficulty": "Easy",
     "rating": 2.71,
@@ -1980,7 +2135,7 @@ window.DEMONS = [
   },
   {
     "id": 1347537,
-    "position": 52,
+    "position": 56,
     "name": "invisible clubstep",
     "difficulty": "Easy",
     "rating": 2.61,
@@ -2016,7 +2171,7 @@ window.DEMONS = [
   },
   {
     "id": 49901047,
-    "position": 53,
+    "position": 57,
     "name": "End Line",
     "difficulty": "Easy",
     "rating": 1.99,
@@ -2054,7 +2209,7 @@ window.DEMONS = [
   },
   {
     "id": 13037894,
-    "position": 54,
+    "position": 58,
     "name": "infinite circles",
     "difficulty": "Easy",
     "rating": 1.97,
@@ -2092,7 +2247,7 @@ window.DEMONS = [
   },
   {
     "id": 57012656,
-    "position": 55,
+    "position": 59,
     "name": "Ship",
     "difficulty": "Easy",
     "rating": 1.92,
@@ -2130,7 +2285,7 @@ window.DEMONS = [
   },
   {
     "id": 89886591,
-    "position": 56,
+    "position": 60,
     "name": "iSpyWithMyLittleEye",
     "difficulty": "Easy",
     "rating": 1.87,
@@ -2168,7 +2323,7 @@ window.DEMONS = [
   },
   {
     "id": 28352064,
-    "position": 57,
+    "position": 61,
     "name": "The Farewell",
     "difficulty": "Easy",
     "rating": 1.78,
@@ -2206,7 +2361,7 @@ window.DEMONS = [
   },
   {
     "id": 76582313,
-    "position": 58,
+    "position": 62,
     "name": "The Long Walk Home",
     "difficulty": "Easy",
     "rating": 1.72,
@@ -2244,7 +2399,7 @@ window.DEMONS = [
   },
   {
     "id": 848722,
-    "position": 59,
+    "position": 63,
     "name": "Lights And Thunder",
     "difficulty": "Easy",
     "rating": 1.62,
@@ -2280,7 +2435,7 @@ window.DEMONS = [
   },
   {
     "id": 80790301,
-    "position": 60,
+    "position": 64,
     "name": "Permafrost Mountain",
     "difficulty": "Easy",
     "rating": 1.59,
@@ -2317,7 +2472,7 @@ window.DEMONS = [
   },
   {
     "id": 127078077,
-    "position": 61,
+    "position": 65,
     "name": "Volcano",
     "difficulty": "Easy",
     "rating": 1.24,
@@ -2355,7 +2510,7 @@ window.DEMONS = [
   },
   {
     "id": 56587109,
-    "position": 62,
+    "position": 66,
     "name": "phjork",
     "difficulty": "Easy",
     "rating": 1.2,
@@ -2399,7 +2554,7 @@ window.DEMONS = [
   },
   {
     "id": 128665322,
-    "position": 63,
+    "position": 67,
     "name": "red alert",
     "difficulty": "Easy",
     "rating": 1.18,
@@ -2437,7 +2592,7 @@ window.DEMONS = [
   },
   {
     "id": 56210242,
-    "position": 64,
+    "position": 68,
     "name": "Shiver",
     "difficulty": "Easy",
     "rating": 1.16,
@@ -2475,7 +2630,7 @@ window.DEMONS = [
   },
   {
     "id": 5904109,
-    "position": 65,
+    "position": 69,
     "name": "Platinum Adventure",
     "difficulty": "Easy",
     "rating": 1.13,
@@ -2513,7 +2668,7 @@ window.DEMONS = [
   },
   {
     "id": 566659,
-    "position": 66,
+    "position": 70,
     "name": "demon mixed",
     "difficulty": "Easy",
     "rating": 1.11,
@@ -2549,7 +2704,7 @@ window.DEMONS = [
   },
   {
     "id": 126762295,
-    "position": 67,
+    "position": 71,
     "name": "SCORIGAMI",
     "difficulty": "Easy",
     "rating": 1.09,
@@ -2586,7 +2741,7 @@ window.DEMONS = [
   },
   {
     "id": 55520,
-    "position": 68,
+    "position": 72,
     "name": "THE LIGHTNING ROAD",
     "difficulty": "Easy",
     "rating": 1.05,
@@ -2623,7 +2778,7 @@ window.DEMONS = [
   },
   {
     "id": 88494611,
-    "position": 69,
+    "position": 73,
     "name": "Eternal",
     "difficulty": "Easy",
     "rating": 1.04,
@@ -2661,7 +2816,7 @@ window.DEMONS = [
   },
   {
     "id": 13519,
-    "position": 70,
+    "position": 74,
     "name": "The Nightmare",
     "difficulty": "Easy",
     "rating": 1.04,
